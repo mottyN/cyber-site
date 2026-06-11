@@ -360,6 +360,29 @@ textarea { resize: vertical; min-height: 110px; }
   text-align: center;
 }
 
+/* ===== ספינר שליחה ===== */
+.btn:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.spinner {
+  display: inline-block;
+  width: 1.1em;
+  height: 1.1em;
+  border: 2.5px solid rgba(4, 38, 27, 0.25);
+  border-top-color: #04261b;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  vertical-align: -0.2em;
+  margin-inline-start: 0.5em;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
 /* ===== פרטי קשר ===== */
 .contact-methods {
   display: grid;

@@ -89,10 +89,18 @@
             <textarea name="הודעה" placeholder="על איזו פלטפורמה האתר בנוי? במה העסק עוסק? יש משהו ספציפי שמדאיג אותך?"></textarea>
           </div>
 
-          <button type="submit" class="btn btn-primary" style="width: 100%;">שלח פנייה 🚀</button>
+          <button type="submit" id="submit-btn" class="btn btn-primary" style="width: 100%;">שלח פנייה 🚀</button>
 
           <p class="form-note">הפנייה נשלחת ישירות אלינו במייל. נחזור אליך בהקדם!</p>
         </form>
+
+        <script>
+          document.querySelector('form').addEventListener('submit', function () {
+            var btn = document.getElementById('submit-btn');
+            btn.disabled = true;
+            btn.innerHTML = 'שולח...<span class="spinner"></span>';
+          });
+        </script>
       </div>
     </div>
   </section>

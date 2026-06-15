@@ -360,6 +360,41 @@ textarea { resize: vertical; min-height: 110px; }
   text-align: center;
 }
 
+/* ===== הצהרות / checkbox ===== */
+.consent {
+  display: flex;
+  gap: 0.7rem;
+  align-items: flex-start;
+  background: var(--bg);
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  padding: 0.9rem 1rem;
+  margin-bottom: 0.9rem;
+  transition: border-color 0.2s;
+}
+
+.consent:focus-within { border-color: var(--accent); }
+
+.consent input[type="checkbox"] {
+  width: 1.2rem;
+  height: 1.2rem;
+  flex-shrink: 0;
+  margin-top: 0.3rem;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.consent label {
+  margin-bottom: 0;
+  font-weight: 400;
+  color: var(--text-muted);
+  font-size: 0.93rem;
+  line-height: 1.6;
+  cursor: pointer;
+}
+
+.consent label strong { color: var(--text); font-weight: 700; }
+
 /* ===== ספינר שליחה ===== */
 .btn:disabled {
   opacity: 0.75;

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>צור קשר | מערכות תוכנה — מחלקת סייבר</title>
-  <meta name="description" content="טופס פנייה לתיאום בדיקת סייבר לאתר האינטרנט שלך. בדיקה בסיסית חינם.">
+  <title>צור קשר | מערכות תוכנה</title>
+  <meta name="description" content="טופס פנייה למערכות תוכנה — בדיקת סייבר לאתר שלך או בניית אתר חדש. מבצעי השקה בחינם.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -22,14 +22,20 @@
 <header>
   <div class="nav">
     <a href="index.html" class="logo">
-      <span class="shield">🛡️</span>
-      <span>מערכות תוכנה<small>מחלקת סייבר</small></span>
+      <svg class="logo-mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M24 4 L42 11 L42 24 C42 34 34 41 24 44 C14 41 6 34 6 24 L6 11 Z" fill="#16223c" stroke="#00e5a0" stroke-width="2.5" stroke-linejoin="round"/>
+        <path d="M20 18 L14.5 24 L20 30" stroke="#00e5a0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M28 18 L33.5 24 L28 30" stroke="#00e5a0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <line x1="26.5" y1="17" x2="21.5" y2="31" stroke="#00e5a0" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+      <span>מערכות תוכנה<small>סייבר ובניית אתרים</small></span>
     </a>
     <nav>
       <ul>
         <li><a href="index.html">בית</a></li>
-        <li><a href="services.html">שירותים ומחירים</a></li>
-        <li><a href="contact.html" class="cta active">לבדיקת סייבר &larr;</a></li>
+        <li><a href="cyber.html">סייבר</a></li>
+        <li><a href="web.html">בניית אתרים</a></li>
+        <li><a href="contact.html" class="cta active">צור קשר &larr;</a></li>
       </ul>
     </nav>
   </div>
@@ -40,18 +46,18 @@
   <section class="hero" style="padding-bottom: 1rem;">
     <div class="container">
       <h1>צור <span class="highlight">קשר</span></h1>
-      <p>מלא את הטופס ונחזור אליך בהקדם.</p>
+      <p>מלא את הטופס ונחזור אליך בהקדם — בין אם לבדיקת סייבר ובין אם לבניית אתר.</p>
     </div>
   </section>
 
   <section style="padding-top: 1rem;">
     <div class="container">
       <div class="form-wrap">
-        <h2 class="section-title" style="font-size: 1.5rem; margin-bottom: 1.5rem;">טופס פנייה לבדיקת סייבר</h2>
+        <h2 class="section-title" style="font-size: 1.5rem; margin-bottom: 1.5rem;">טופס פנייה</h2>
 
         <form action="https://formsubmit.co/p0533105452@gmail.com" method="POST">
           <!-- הגדרות FormSubmit -->
-          <input type="hidden" name="_subject" value="פנייה חדשה מהאתר — בדיקת סייבר!">
+          <input type="hidden" name="_subject" value="פנייה חדשה מהאתר — מערכות תוכנה!">
           <input type="hidden" name="_captcha" value="false">
           <input type="hidden" name="_template" value="table">
           <input type="hidden" name="_next" value="https://mottyn.github.io/cyber-site/thanks.html">
@@ -78,23 +84,30 @@
           </div>
 
           <div class="form-group">
-            <label>כתובת האתר לבדיקה <span class="req">*</span></label>
-            <input type="text" name="כתובת האתר" required placeholder="www.your-site.co.il" dir="ltr" style="text-align: right;">
-          </div>
-
-          <div class="form-group">
-            <label>איזו בדיקה מעניינת אותך? <span class="req">*</span></label>
-            <select name="סוג בדיקה" required>
-              <option value="" disabled selected>בחר מסלול...</option>
-              <option value="בדיקה בסיסית (חינם)">בדיקה בסיסית — 300 ₪ (חינם!)</option>
-              <option value="בדיקה מעמיקה">בדיקה מעמיקה — לפי הצעת מחיר</option>
+            <label>במה נוכל לעזור? <span class="req">*</span></label>
+            <select name="השירות המבוקש" id="service-select" required>
+              <option value="" disabled selected>בחר שירות...</option>
+              <optgroup label="🛡️ בדיקות סייבר">
+                <option value="בדיקת סייבר בסיסית (חינם)">בדיקת סייבר בסיסית — 300 ₪ (חינם!)</option>
+                <option value="בדיקת סייבר מעמיקה">בדיקת סייבר מעמיקה — לפי הצעת מחיר</option>
+              </optgroup>
+              <optgroup label="💻 בניית אתרים">
+                <option value="בניית אתר (המבצע — חינם)">בניית אתר — המבצע (חינם)</option>
+                <option value="פריסה / שרתים / תחזוקה">פריסה / שרתים / תחזוקה</option>
+                <option value="קבלת הקוד בלבד">רוצה רק את הקוד</option>
+              </optgroup>
               <option value="עוד לא יודע">עוד לא יודע — אשמח לייעוץ</option>
             </select>
           </div>
 
           <div class="form-group">
+            <label>כתובת אתר קיים (אם יש)</label>
+            <input type="text" name="כתובת אתר" placeholder="www.your-site.co.il" dir="ltr" style="text-align: right;">
+          </div>
+
+          <div class="form-group">
             <label>ספר לנו קצת על העסק <span class="req">*</span></label>
-            <textarea name="הודעה" required placeholder="על איזו פלטפורמה האתר בנוי? במה העסק עוסק? יש משהו ספציפי שמדאיג אותך?"></textarea>
+            <textarea name="הודעה" required placeholder="במה העסק עוסק? מה אתה צריך? יש משהו ספציפי שחשוב לך?"></textarea>
           </div>
 
           <button type="submit" id="submit-btn" class="btn btn-primary" style="width: 100%;">שלח פנייה 🚀</button>
@@ -103,6 +116,15 @@
         </form>
 
         <script>
+          // בחירת השירות מראש לפי הדף שממנו הגיע המבקר (?service=cyber / ?service=web)
+          (function () {
+            var params = new URLSearchParams(window.location.search);
+            var service = params.get('service');
+            var select = document.getElementById('service-select');
+            if (service === 'cyber') select.value = 'בדיקת סייבר בסיסית (חינם)';
+            else if (service === 'web') select.value = 'בניית אתר (המבצע — חינם)';
+          })();
+
           document.querySelector('form').addEventListener('submit', function () {
             var btn = document.getElementById('submit-btn');
             btn.disabled = true;
@@ -117,7 +139,7 @@
 
 <footer>
   <div class="container">
-    <span>© 2026 מערכות תוכנה — מחלקת סייבר</span>
+    <span>© 2026 מערכות תוכנה</span>
     <span>טלפון: <a href="tel:0533105452" dir="ltr">053-310-5452</a></span>
   </div>
 </footer>
